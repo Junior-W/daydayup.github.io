@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>RoadSplit - My API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "RoadSplit";
+        var mkdocs_page_input_path = "pose_estimulation\\RoadSplit.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">sensor_simulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">pose_estimulation</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">RoadSplit</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#core.pose_estimulation.road_split-classes">Classes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#core.pose_estimulation.road_split.RoadSplit">RoadSplit</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">core</li>
+          <li class="breadcrumb-item">pose_estimulation</li>
+      <li class="breadcrumb-item active">RoadSplit</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="core.pose_estimulation.road_split" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">core.pose_estimulation.road_split</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="core.pose_estimulation.road_split-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="core.pose_estimulation.road_split.RoadSplit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">RoadSplit</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">RoadSplit</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h4 id="core.pose_estimulation.road_split.RoadSplit-attributes">Attributes</h4>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.cmd1" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">cmd1</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cmd1</span> <span class="o">=</span> <span class="s1">&#39;cd ./third/CENet&#39;</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.cmd2" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">cmd2</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cmd2</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39; python infer.py -d ./data -l ./result -m ./model/512-594 -s valid/test&#39;</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.dis_th" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">dis_th</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">dis_th</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.distance_threshold" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">distance_threshold</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">distance_threshold</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">distance_threshold</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.img_height" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">img_height</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">img_height</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">img_height</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.img_width" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">img_width</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">img_width</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">img_width</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.num_iterations" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">num_iterations</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">num_iterations</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">num_iterations</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.number_of_decimal" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">number_of_decimal</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">number_of_decimal</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">number_of_decimal</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.ransac_n" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">ransac_n</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ransac_n</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">ransac_n</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.road_range" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">road_range</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">road_range</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">road_range</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.road_split_label_dir" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">road_split_label_dir</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">road_split_label_dir</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">road_split_label_dir</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.road_split_pc_dir" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">road_split_pc_dir</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">road_split_pc_dir</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">road_split_pc_dir</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h4 id="core.pose_estimulation.road_split.RoadSplit-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.get_pc_road_in_img" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_pc_road_in_img</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_pc_road_in_img</span><span class="p">(</span><span class="n">pts_img</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pts_rect_depth</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>pts_img</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>图片中道路的点</p>
+              </div>
+            </li>
+            <li>
+              <b><code>pts_rect_depth</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>深度图中的点</p>
+              </div>
+            </li>
+            <li>
+              <b><code>points</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>属于路面的点云</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>可以映射到图片的道路点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.split_pcd_road_by_CENet" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">split_pcd_road_by_CENet</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">split_pcd_road_by_CENet</span><span class="p">(</span><span class="n">bg_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bg_pc_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_road_label_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">log_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>bg_index</code></b>
+                  (<code>int</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景索引</p>
+              </div>
+            </li>
+            <li>
+              <b><code>bg_pc_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景点云存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>save_road_label_dir</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>保存路面信息标签的目录</p>
+              </div>
+            </li>
+            <li>
+              <b><code>log_dir</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>保存日志的目录 # :return: 属于路面的点云, 路面标签, 属于非路面的点云, 属于路面的点云的索引</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.Tuple">Tuple</span>[<span title="numpy.ndarray">ndarray</span>, <span title="numpy.ndarray">ndarray</span>]</code>
+            –
+            <div class="doc-md-description">
+              <p>属于路面的点云, 属于非路面的点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.split_pcd_road_by_RANSAC" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">split_pcd_road_by_RANSAC</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">split_pcd_road_by_RANSAC</span><span class="p">(</span><span class="n">bg_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bg_pc_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_road_label_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">log_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>bg_index</code></b>
+                  (<code>int</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景索引</p>
+              </div>
+            </li>
+            <li>
+              <b><code>bg_pc_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景点云存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>save_road_label_dir</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>保存路面信息标签的目录</p>
+              </div>
+            </li>
+            <li>
+              <b><code>log_dir</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>保存日志的目录 # :return: 属于路面的点云, 路面标签, 属于非路面的点云, 属于路面的点云的索引</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.Tuple">Tuple</span>[<span title="numpy.ndarray">ndarray</span>, <span title="numpy.ndarray">ndarray</span>]</code>
+            –
+            <div class="doc-md-description">
+              <p>属于路面的点云, 属于非路面的点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.split_pcd_road_label" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">split_pcd_road_label</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">split_pcd_road_label</span><span class="p">(</span><span class="n">labels</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="n">List</span><span class="p">]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>使用点云路面标签获取路面与非路面的袋牛奶索引</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>labels</code></b>
+                  (<code>list</code>)
+              –
+              <div class="doc-md-description">
+                <p>路面标签</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>, <span title="typing.List">List</span>]</code>
+            –
+            <div class="doc-md-description">
+              <p>属于路面的点云的索引,属于非路面的点云的索引</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.pose_estimulation.road_split.RoadSplit.trunc_road_pc" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">trunc_road_pc</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">trunc_road_pc</span><span class="p">(</span><span class="n">pc_road</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>保留某个范围的路面点云</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>pc_road</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>路面点云</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>范围截取后的路面点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../sensor_simulation/Blender/" class="btn btn-neutral float-left" title="Blender"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../CollisionDetection/" class="btn btn-neutral float-right" title="CollisionDetection">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../sensor_simulation/Blender/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../CollisionDetection/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

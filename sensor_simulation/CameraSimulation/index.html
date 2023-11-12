@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CameraSimulation - My API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CameraSimulation";
+        var mkdocs_page_input_path = "sensor_simulation\\CameraSimulation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">sensor_simulation</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">CameraSimulation</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#core.sensor_simulation.camera_simulation-classes">Classes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#core.sensor_simulation.camera_simulation.VirtualCamera">VirtualCamera</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">core</li>
+          <li class="breadcrumb-item">sensor_simulation</li>
+      <li class="breadcrumb-item active">CameraSimulation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- # Camera Simulation -->
+
+<!-- ::: logger
+::: utils.init_.init_parser -->
+<!-- ::: core.sensor_simulation.lidar_simulation.LidarSimulator -->
+
+
+<div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="core.sensor_simulation.camera_simulation" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">core.sensor_simulation.camera_simulation</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="core.sensor_simulation.camera_simulation-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="core.sensor_simulation.camera_simulation.VirtualCamera" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">VirtualCamera</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">VirtualCamera</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  
+      <p>相机模拟器</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h4 id="core.sensor_simulation.camera_simulation.VirtualCamera-attributes">Attributes</h4>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.blender" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">blender</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blender</span> <span class="o">=</span> <span class="n">Blender</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.default_log_dir" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">default_log_dir</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">default_log_dir</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">blender_root_dirname</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.image_height" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">image_height</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">image_height</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">img_height</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.image_width" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">image_width</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">image_width</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">img_width</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.is_transparent" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">is_transparent</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">is_transparent</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.lens" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">lens</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lens</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">lens</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.sensor_fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">sensor_fit</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">sensor_fit</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">sensor_fit</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.sensor_height" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">sensor_height</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">sensor_height</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">sensor_height</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.sensor_width" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">sensor_width</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">sensor_width</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">sensor_width</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.shift_x" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">shift_x</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">shift_x</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">shift_x</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.shift_y" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">shift_y</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">shift_y</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">shift_y</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h4 id="core.sensor_simulation.camera_simulation.VirtualCamera-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.camera_simulation" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">camera_simulation</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">camera_simulation</span><span class="p">(</span><span class="n">save_img_obj_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">obj_camera_position</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">obj_rz_degree</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">obj_mesh_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bg_calib_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_log_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">default_log_dir</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>save_img_obj_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>生成图片存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_camera_position</code></b>
+                  (<code><span title="typing.List">List</span>[float]</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体平移参数</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_rz_degree</code></b>
+                  (<code>float</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体旋转角度</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_mesh_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>bg_calib_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景矫正文件存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>save_log_dir</code></b>
+                  (<code>str</code>, default:
+                      <code><a class="autorefs autorefs-internal" title="core.sensor_simulation.camera_simulation.VirtualCamera.default_log_dir" href="#core.sensor_simulation.camera_simulation.VirtualCamera.default_log_dir">default_log_dir</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>日志存储路径</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>物体二维观测图片</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.crop_obj_from_image" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">crop_obj_from_image</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">crop_obj_from_image</span><span class="p">(</span><span class="n">img_obj_init</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>图像中裁剪对象,(以行列为单位)去除图像中的透明像素</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>img_obj_init</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>原始物体图片</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>含物体的最小图片</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.camera_simulation.VirtualCamera.get_image_filename" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_image_filename</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_image_filename</span><span class="p">(</span><span class="n">position_camera</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">obj_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rz_degree</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>拼接blender生成的图像文件名</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>position_camera</code></b>
+                  (<code><span title="typing.List">List</span>[float]</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体相机坐标系下坐标</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_name</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体名称</p>
+              </div>
+            </li>
+            <li>
+              <b><code>rz_degree</code></b>
+                  (<code>float</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体旋转角度</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code>str</code>
+            –
+            <div class="doc-md-description">
+              <p>生成的物体图片文件名</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../LidarSimulation/" class="btn btn-neutral float-left" title="LidarSimulation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Blender/" class="btn btn-neutral float-right" title="Blender">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../LidarSimulation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Blender/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>UtilsMesh - My API Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "UtilsMesh";
+        var mkdocs_page_input_path = "UtilsMesh.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">sensor_simulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">UtilsMesh</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#utils.Utils_mesh-classes">Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#utils.Utils_mesh.UtilsMesh">UtilsMesh</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#utils.Utils_mesh.UtilsMesh-attributes">Attributes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#utils.Utils_mesh.UtilsMesh-functions">Functions</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">utils</li>
+      <li class="breadcrumb-item active">UtilsMesh</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="utils.Utils_mesh" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">utils.Utils_mesh</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="utils.Utils_mesh-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="utils.Utils_mesh.UtilsMesh" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">UtilsMesh</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">UtilsMesh</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h4 id="utils.Utils_mesh.UtilsMesh-attributes">Attributes</h4>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="utils.Utils_mesh.UtilsMesh.mesh_obj_scale" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">mesh_obj_scale</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">mesh_obj_scale</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">multi_scale</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h4 id="utils.Utils_mesh.UtilsMesh-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_mesh.UtilsMesh.get_objs_attr" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_objs_attr</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_objs_attr</span><span class="p">(</span><span class="n">obj_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">has_image_box</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>obj_list</code></b>
+                  (<code>list</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体列表</p>
+              </div>
+            </li>
+            <li>
+              <b><code>has_image_box</code></b>
+                  (<code>bool</code>, default:
+                      <code>False</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>是否含有image_box</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_mesh.UtilsMesh.load_normalized_mesh_obj" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">load_normalized_mesh_obj</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">load_normalized_mesh_obj</span><span class="p">(</span><span class="n">obj_mesh_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>obj_mesh_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体模型路径</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>
+            –
+            <div class="doc-md-description">
+              <p>正则化的物体</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_mesh.UtilsMesh.obj_adjust" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">obj_adjust</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">obj_adjust</span><span class="p">(</span><span class="n">init_obj</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>init_obj</code></b>
+                  (<code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>初始物体</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../FormatConvert/" class="btn btn-neutral float-left" title="FormatConvert"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../FormatConvert/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>UtilsLabel - My API Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "UtilsLabel";
+        var mkdocs_page_input_path = "UtilsLabel.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">sensor_simulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sensor_simulation/Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">UtilsLabel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#utils.Utils_label-classes">Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#utils.Utils_label.UtilsLabel">UtilsLabel</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#utils.Utils_label.UtilsLabel-attributes">Attributes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#utils.Utils_label.UtilsLabel-functions">Functions</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">utils</li>
+      <li class="breadcrumb-item active">UtilsLabel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="utils.Utils_label" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">utils.Utils_label</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="utils.Utils_label-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="utils.Utils_label.UtilsLabel" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">UtilsLabel</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">UtilsLabel</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h4 id="utils.Utils_label.UtilsLabel-attributes">Attributes</h4>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.occ_point_max" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">occ_point_max</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">occ_point_max</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">occ_point_max</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.occlusion_th" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">occlusion_th</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">occlusion_th</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">occlusion_th</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h4 id="utils.Utils_label.UtilsLabel-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.get_care_labels" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_care_labels</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_care_labels</span><span class="p">(</span><span class="n">bg_labels</span><span class="p">,</span> <span class="n">care_key</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>bg_labels</code></b>
+              –
+              <div class="doc-md-description">
+                <p>背景标签</p>
+              </div>
+            </li>
+            <li>
+              <b><code>care_key</code></b>
+              –
+              <div class="doc-md-description">
+                <p>关注物体类别</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="typing.Any">Any</span>], <span title="typing.List">List</span>[<span title="typing.Any">Any</span>]]</code>
+            –
+            <div class="doc-md-description">
+              <p>关注的物体标签，不关注的物体标签</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.get_image_occlusion_ratio" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_image_occlusion_ratio</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_image_occlusion_ratio</span><span class="p">(</span><span class="n">box1</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">boxes2</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>box1</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>当前物体在图片中的2d box</p>
+              </div>
+            </li>
+            <li>
+              <b><code>boxes2</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>其余物体在图片中的2d box</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code>float</code>
+            –
+            <div class="doc-md-description">
+              <p>当前物体被遮挡的比率</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.get_labels" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_labels</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_labels</span><span class="p">(</span><span class="n">rz_degree</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">lidar_box</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">OrientedBoundingBox</span><span class="p">,</span> <span class="n">calib_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">image_box</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">truncation_ratio</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.get_occlusion_level" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_occlusion_level</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_occlusion_level</span><span class="p">(</span><span class="n">occlusion_ratio</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>occlusion_ratio</code></b>
+                  (<code>float</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体被遮挡的比率</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code>int</code>
+            –
+            <div class="doc-md-description">
+              <p>物体occlusion标签值</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.get_truncation_ratio" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_truncation_ratio</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">get_truncation_ratio</span><span class="p">(</span><span class="n">box1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">box2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.sort_labels" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">sort_labels</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">sort_labels</span><span class="p">(</span><span class="n">labels_input</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.update_bg_init_label" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">update_bg_init_label</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">update_bg_init_label</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">init_pc</span><span class="p">,</span> <span class="n">combine_pc</span><span class="p">,</span> <span class="n">corners</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.update_obj_inserted_labels" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">update_obj_inserted_labels</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">update_obj_inserted_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">infos</span><span class="p">,</span> <span class="n">delete_points_mask</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.update_occ_only_image" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">update_occ_only_image</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">update_occ_only_image</span><span class="p">(</span><span class="n">labels</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>labels</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>物体标签</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code>list</code>
+            –
+            <div class="doc-md-description">
+              <p>更新occlusion后的物体标签</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.update_single_init_label" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">update_single_init_label</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">update_single_init_label</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">init_pc</span><span class="p">,</span> <span class="n">combine_pc</span><span class="p">,</span> <span class="n">corner</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="utils.Utils_label.UtilsLabel.update_single_labels" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">update_single_labels</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">update_single_labels</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">delete_points_mask</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../occusion_handing/PcCombination/" class="btn btn-neutral float-left" title="PcCombination"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../UtilsIO/" class="btn btn-neutral float-right" title="UtilsIO">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../occusion_handing/PcCombination/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../UtilsIO/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

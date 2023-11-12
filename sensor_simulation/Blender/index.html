@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Blender - My API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Blender";
+        var mkdocs_page_input_path = "sensor_simulation\\Blender.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">sensor_simulation</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Blender</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#blender.blender.Blender-attributes">Attributes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.BASE_DIR">BASE_DIR</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.blank_filename">blank_filename</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.coordinate_type">coordinate_type</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.light_data">light_data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.lights">lights</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.location">location</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.param_split_flag">param_split_flag</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.project_dirname">project_dirname</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.render_filename">render_filename</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blender.blender.Blender-functions">Functions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.render_gltf_obj">render_gltf_obj()</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blender.blender.Blender.run_blender_script">run_blender_script()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">core</li>
+          <li class="breadcrumb-item">sensor_simulation</li>
+      <li class="breadcrumb-item active">Blender</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="doc doc-object doc-class">
+
+
+
+
+<h1 id="blender.blender.Blender" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">blender.blender.Blender</span>
+
+
+</h1>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Blender</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h2 id="blender.blender.Blender-attributes">Attributes</h2>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.BASE_DIR" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">BASE_DIR</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">blender_root_dirname</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.blank_filename" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">blank_filename</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blank_filename</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">blender_blank_filename</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.coordinate_type" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">coordinate_type</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">coordinate_type</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">coordinate_type</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.light_data" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">light_data</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">light_data</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">light_data</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.lights" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">lights</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lights</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">lights</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.location" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">location</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">location</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">location</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.param_split_flag" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">param_split_flag</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">param_split_flag</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">split_name_flag</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.project_dirname" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">project_dirname</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">project_dirname</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">common_config</span><span class="o">.</span><span class="n">project_dirname</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="blender.blender.Blender.render_filename" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">render_filename</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">render_filename</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">camera_config</span><span class="o">.</span><span class="n">blender_render_filename</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h2 id="blender.blender.Blender-functions">Functions</h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="blender.blender.Blender.render_gltf_obj" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">render_gltf_obj</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">render_gltf_obj</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="blender.blender.Blender.run_blender_script" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">run_blender_script</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">run_blender_script</span><span class="p">(</span><span class="n">save_img_obj_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">obj_camera_position</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">obj_rz_degree</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">obj_mesh_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bg_calib_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_log_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lens</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">shift_x</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">shift_y</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sensor_fix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sensor_height</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sensor_width</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">image_height</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">image_width</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>save_img_obj_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>生成图片存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_camera_position</code></b>
+                  (<code><span title="typing.List">List</span>[float]</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体平移参数</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_rz_degree</code></b>
+                  (<code>float</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体旋转角度</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_mesh_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>bg_calib_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>背景矫正文件存储路径</p>
+              </div>
+            </li>
+            <li>
+              <b><code>save_log_dir</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>日志存储路径</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>物体二维观测图片</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../CameraSimulation/" class="btn btn-neutral float-left" title="CameraSimulation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../pose_estimulation/RoadSplit/" class="btn btn-neutral float-right" title="RoadSplit">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../CameraSimulation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../pose_estimulation/RoadSplit/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>ImgCombination - My API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ImgCombination";
+        var mkdocs_page_input_path = "occusion_handing\\ImgCombination.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">sensor_simulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/LidarSimulation/">LidarSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../sensor_simulation/Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">occusion_handing</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">ImgCombination</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#core.occusion_handing.img_combination-classes">Classes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#core.occusion_handing.img_combination.ImgCombination">ImgCombination</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">core</li>
+          <li class="breadcrumb-item">occusion_handing</li>
+      <li class="breadcrumb-item active">ImgCombination</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="core.occusion_handing.img_combination" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">core.occusion_handing.img_combination</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="core.occusion_handing.img_combination-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="core.occusion_handing.img_combination.ImgCombination" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ImgCombination</span>
+
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h4 id="core.occusion_handing.img_combination.ImgCombination-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.occusion_handing.img_combination.ImgCombination.combine_bg_with_obj_single_refine" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">combine_bg_with_obj_single_refine</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">combine_bg_with_obj_single_refine</span><span class="p">(</span><span class="n">center</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">bg</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>center</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+            <li>
+              <b><code>obj</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+            <li>
+              <b><code>bg</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+            <li>
+              <b><code>mask</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.occusion_handing.img_combination.ImgCombination.img_combination_with_objs" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">img_combination_with_objs</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">img_combination_with_objs</span><span class="p">(</span><span class="n">img_bg</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">img_objs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">obj_centers_in_img</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">index</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">refine</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>将背景图片和物体图片组合</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>img_bg</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>背景图片</p>
+              </div>
+            </li>
+            <li>
+              <b><code>img_objs</code></b>
+                  (<code><span title="typing.List">List</span>[<span title="numpy.ndarray">ndarray</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体图片</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj_centers_in_img</code></b>
+                  (<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[int]]</code>)
+              –
+              <div class="doc-md-description">
+                <p>物体图片在背景图片中的中心点</p>
+              </div>
+            </li>
+            <li>
+              <b><code>index</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>根据mesh到源点距离，由大到小排序的索引</p>
+              </div>
+            </li>
+            <li>
+              <b><code>refine</code></b>
+              –
+              <div class="doc-md-description">
+                <p>是否改进</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>组合图片，组合并改进的图片</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.occusion_handing.img_combination.ImgCombination.img_combination_with_one_obj" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">img_combination_with_one_obj</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">img_combination_with_one_obj</span><span class="p">(</span><span class="n">center</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">bg</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>将一个物体图片插入到背景图片中</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>center</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>物体在图片的中心</p>
+              </div>
+            </li>
+            <li>
+              <b><code>obj</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>物体图片</p>
+              </div>
+            </li>
+            <li>
+              <b><code>bg</code></b>
+                  (<code><span title="numpy.ndarray">ndarray</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>背景图片</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>组合图片</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../pose_estimulation/PoseGeneration/" class="btn btn-neutral float-left" title="PoseGeneration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../PcCombination/" class="btn btn-neutral float-right" title="PcCombination">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../pose_estimulation/PoseGeneration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../PcCombination/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

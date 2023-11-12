@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>LidarSimulation - My API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "LidarSimulation";
+        var mkdocs_page_input_path = "sensor_simulation\\LidarSimulation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My API Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">sensor_simulation</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">LidarSimulation</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#core.sensor_simulation.lidar_simulation-classes">Classes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#core.sensor_simulation.lidar_simulation.VirtualLidar">VirtualLidar</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CameraSimulation/">CameraSimulation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Blender/">Blender</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">pose_estimulation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/RoadSplit/">RoadSplit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/CollisionDetection/">CollisionDetection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pose_estimulation/PoseGeneration/">PoseGeneration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">occusion_handing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/ImgCombination/">ImgCombination</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../occusion_handing/PcCombination/">PcCombination</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">utils</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsLabel/">UtilsLabel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsIO/">UtilsIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsCommom/">UtilsCommom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsBox/">UtilsBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CalibrationKITTI/">CalibrationKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Object3dKITTI/">Object3dKITTI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../FormatConvert/">FormatConvert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../UtilsMesh/">UtilsMesh</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">core</li>
+          <li class="breadcrumb-item">sensor_simulation</li>
+      <li class="breadcrumb-item active">LidarSimulation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- # Lidar Simulation -->
+
+<!-- ::: logger
+::: utils.init_.init_parser -->
+<!-- ::: core.sensor_simulation.lidar_simulation.LidarSimulator -->
+
+<!-- ::: core.sensor_simulation.lidar_simulation.LidarSimulator -->
+
+
+<div class="doc doc-object doc-module">
+
+
+
+
+<h1 id="core.sensor_simulation.lidar_simulation" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">core.sensor_simulation.lidar_simulation</span>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+<h2 id="core.sensor_simulation.lidar_simulation-classes">Classes</h2>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h3 id="core.sensor_simulation.lidar_simulation.VirtualLidar" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">VirtualLidar</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">VirtualLidar</span><span class="p">()</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Lidar模拟器</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h4 id="core.sensor_simulation.lidar_simulation.VirtualLidar-attributes">Attributes</h4>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.extent_range" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">extent_range</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">extent_range</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">extent_range</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.horizontal_left" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">horizontal_left</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">horizontal_left</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">horizontal_left</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.horizontal_resolution" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">horizontal_resolution</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">horizontal_resolution</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">horizontal_resolution</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.horizontal_right" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">horizontal_right</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">horizontal_right</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">horizontal_right</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.lidar_position" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">lidar_position</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lidar_position</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">lidar_position</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.loss_rate" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">loss_rate</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">loss_rate</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">loss_rate</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.noise_args" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">noise_args</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">noise_args</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noise_average</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">noise_variance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">noise_severity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_rate</span><span class="p">]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.noise_average" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">noise_average</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">noise_average</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">noise_average</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.noise_severity" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">noise_severity</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">noise_severity</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">noise_severity</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.noise_variance" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">noise_variance</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">noise_variance</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">noise_variance</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.number_of_points" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">number_of_points</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">number_of_points</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">sampling_number_of_points</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.unit_distance" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">unit_distance</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">unit_distance</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.vertical_down" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">vertical_down</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">vertical_down</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">vertical_down</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.vertical_resolution" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">vertical_resolution</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">vertical_resolution</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">vertical_resolution</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.vertical_up" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">vertical_up</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">vertical_up</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lidar_config</span><span class="o">.</span><span class="n">vertical_up</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<h4 id="core.sensor_simulation.lidar_simulation.VirtualLidar-functions">Functions</h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.cast_ray" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">cast_ray</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cast_ray</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span><span class="p">,</span> <span class="n">rays</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>光线投射</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>mesh_obj</code></b>
+                  (<code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>mesh格式的物体</p>
+              </div>
+            </li>
+            <li>
+              <b><code>rays</code></b>
+                  (<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>)
+              –
+              <div class="doc-md-description">
+                <p>光线</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code>dict</code>
+            –
+            <div class="doc-md-description">
+              <p>光线投射结果信息</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.create_pc" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">create_pc</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">create_pc</span><span class="p">(</span><span class="n">rays</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">ray_cast_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>生成点云</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>rays</code></b>
+                  (<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>)
+              –
+              <div class="doc-md-description">
+                <p>光线</p>
+              </div>
+            </li>
+            <li>
+              <b><code>ray_cast_info</code></b>
+                  (<code>dict</code>)
+              –
+              <div class="doc-md-description">
+                <p>光线投影结果信息</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>
+            –
+            <div class="doc-md-description">
+              <p>物体点云中点的集合列表</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.create_ray" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">create_ray</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">create_ray</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>创建投射物体的光线</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>mesh_obj</code></b>
+                  (<code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>o3d.geometry.TriangleMesh格式的物体</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>
+            –
+            <div class="doc-md-description">
+              <p>投射该物体的光线</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.lidar_simulation_by_mesh_sampling" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">lidar_simulation_by_mesh_sampling</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lidar_simulation_by_mesh_sampling</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">PointCloud</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Mesh采样入口函数</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>mesh_obj</code></b>
+                  (<code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>mesh格式的物体</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="open3d.geometry.PointCloud">PointCloud</span></code>
+            –
+            <div class="doc-md-description">
+              <p>模拟生成的物体点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.lidar_simulation_by_mesh_simulation" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">lidar_simulation_by_mesh_simulation</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lidar_simulation_by_mesh_simulation</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">:</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">TriangleMesh</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">o3d</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">PointCloud</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>雷达模拟入口函数</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>mesh_obj</code></b>
+                  (<code><span title="open3d.geometry.TriangleMesh">TriangleMesh</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>mesh格式的物体</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="open3d.geometry.PointCloud">PointCloud</span></code>
+            –
+            <div class="doc-md-description">
+              <p>模拟生成的物体点云</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h5 id="core.sensor_simulation.lidar_simulation.VirtualLidar.render_pc" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">render_pc</span>
+
+
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">render_pc</span><span class="p">(</span><span class="n">pc_obj</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>向标准点云中添加噪声，使得生成的点云真实</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>pc_obj</code></b>
+                  (<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>)
+              –
+              <div class="doc-md-description">
+                <p>初始点云中点的列表</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+            –
+            <div class="doc-md-description">
+              <p>模拟点云中点的集合的numpy格式</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div><!-- ::: core.sensor_simulation.camera_simulation -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="首页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../CameraSimulation/" class="btn btn-neutral float-right" title="CameraSimulation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../CameraSimulation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
